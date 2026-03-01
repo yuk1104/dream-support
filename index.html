@@ -1,1 +1,41 @@
-# dream-support
+# 新しいフォルダを作成
+mkdir ~/dream-support
+cd ~/dream-support
+
+# index.htmlを作成
+cat > index.html << 'EOF'
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dream - サポート</title>
+  <style>
+    body { font-family: sans-serif; background: #0a0a0a; color: #fff; 
+           display: flex; justify-content: center; align-items: center;
+           min-height: 100vh; margin: 0; }
+    .container { text-align: center; padding: 20px; }
+    h1 { margin-bottom: 1rem; }
+    p { color: rgba(255,255,255,0.7); margin-bottom: 1rem; }
+    a { color: #fff; background: #333; padding: 12px 24px; 
+        border-radius: 8px; text-decoration: none; display: inline-block; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Dream</h1>
+    <p>お問い合わせはこちらまで</p>
+    <a href="mailto:your-email@example.com">メールで連絡</a>
+  </div>
+</body>
+</html>
+EOF
+
+# Gitリポジトリとして初期化
+git init
+git add .
+git commit -m "Initial commit"
+
+# GitHubにプッシュ（先にGitHubでリポジトリ作成が必要）
+git remote add origin https://github.com/あなたのユーザー名/dream-support.git
+git push -u origin main
